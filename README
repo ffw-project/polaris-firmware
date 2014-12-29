@@ -1,0 +1,8 @@
+Pour compiler polaris :
+
+./scripts/build.sh
+cd polaris
+make menuconfig
+make
+
+Les fichiers sont dans firmware/bin/
