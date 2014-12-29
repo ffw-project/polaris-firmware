@@ -19,9 +19,10 @@ copy_feeds_script() {
 }
 
 checkout_feeds() {
-	./$CHECKOUT_DIR/scripts/feeds update packages luci
+	./$CHECKOUT_DIR/scripts/feeds update packages luci ffw-project
 	./$CHECKOUT_DIR/scripts/feeds install -a -p packages
 	./$CHECKOUT_DIR/scripts/feeds install -a -p luci
+	./$CHECKOUT_DIR/scripts/feeds install -a -p ffw-project
 }
 	
 echo "Récupération de la branche attitude_adjustment"
