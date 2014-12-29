@@ -25,7 +25,7 @@ checkout_feeds() {
 	./$CHECKOUT_DIR/scripts/feeds install -a -p ffw-project
 }
 	
-echo "Récupération de la branche attitude_adjustment"
+echo "Récupération de la branche Barrier Breaker"
 checkout ""
 echo "Copie du script de feeds OpenWrt"
 copy_feeds_script ""
