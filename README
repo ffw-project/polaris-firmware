@@ -5,4 +5,4 @@ cd polaris
 make menuconfig
 make
 
-Les fichiers sont dans firmware/bin/
+Les fichiers sont dans polaris/bin/
