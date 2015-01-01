@@ -18,6 +18,20 @@ copy_feeds_script() {
 	cp -fpR ./scripts/feeds.conf.default $CHECKOUT_DIR/
 }
 
+polaris_adaptation() {
+	fileTarget=$CHECKOUT_DIR/'include/target.mk'
+
+	if ! grep -q Polaris-Firmware $fileTarget
+	then
+		line=`expr $(sed -n /DEFAULT_PACKAGES:=/= $fileTarget) + 1`
+		# liste des packages necessaire pour polaris
+		package_polaris="wifidog-ffw"
+
+		sed -i `expr $line`i'DEFAULT_PACKAGES:='$package_polaris $fileTarget
+		sed -i `expr $line`i'# Polaris-Firmware - default packages' $fileTarget
+	fi
+ }
+
 checkout_feeds() {
 	./$CHECKOUT_DIR/scripts/feeds update packages luci polaris
 	./$CHECKOUT_DIR/scripts/feeds install -a -p packages
@@ -33,6 +47,7 @@ echo "====================================================================="
 echo "Copie du script de feeds OpenWrt"
 echo "====================================================================="
 copy_feeds_script ""
+polaris_adaptation ""
 echo "====================================================================="
 echo "Récupération des paquetages des feeds"
 echo "====================================================================="
