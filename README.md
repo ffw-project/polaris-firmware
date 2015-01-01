@@ -7,4 +7,4 @@ Pour compiler polaris :
 * make menuconfig
 * make
 
-Les fichiers sont dans polaris/bin/
+Les fichiers sont dans polaris/bin/ après la compilation
