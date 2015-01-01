@@ -2,7 +2,7 @@
 
 Pour compiler polaris :
 
-./scripts/build.sh
+* ./scripts/build.sh
 * cd polaris
 * make menuconfig #Si vous souhaitez ajouter ou modifier des paquets.
 * make V=99
