@@ -25,7 +25,7 @@ polaris_adaptation() {
 	then
 		line=`expr $(sed -n /DEFAULT_PACKAGES:=/= $fileTarget) + 1`
 		# liste des packages necessaire pour polaris
-		package_polaris="wifidog-ffw"
+		package_polaris="wifidog-ffw tinyproxy luci luci-i18n-french luci-app-tinyproxy"
 
 		sed -i `expr $line`i'DEFAULT_PACKAGES:='$package_polaris $fileTarget
 		sed -i `expr $line`i'# Polaris-Firmware - default packages' $fileTarget
