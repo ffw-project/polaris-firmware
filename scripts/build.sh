@@ -26,7 +26,7 @@ polaris_adaptation() {
 	then
 		line=`expr $(sed -n /DEFAULT_PACKAGES:=/= $fileTarget) + 1`
 		# liste des packages necessaire pour polaris
-		package_polaris="wifidog-ffw tinyproxy luci luci-i18n-french luci-app-tinyproxy"
+		package_polaris="wifidog-ffw tinyproxy uhttpd uhttpd-mod-ubus luci-mod-admin-full luci-theme-bootstrap luci-i18n-french luci-app-tinyproxy"
 
 		sed -i `expr $line`i"DEFAULT_PACKAGES:=`echo $package_polaris`" $fileTarget
 		sed -i `expr $line`i'# Polaris-Firmware - default packages' $fileTarget
@@ -34,10 +34,11 @@ polaris_adaptation() {
  }
 
 checkout_feeds() {
-	./$CHECKOUT_DIR/scripts/feeds update packages luci routing polaris
+	./$CHECKOUT_DIR/scripts/feeds update packages luci routing oldpackages polaris
 	./$CHECKOUT_DIR/scripts/feeds install -a -p packages
 	./$CHECKOUT_DIR/scripts/feeds install -a -p luci
 	./$CHECKOUT_DIR/scripts/feeds install -a -p routing
+	./$CHECKOUT_DIR/scripts/feeds install -a -p oldpackages
 	./$CHECKOUT_DIR/scripts/feeds install -a -p polaris
 }
 	
