@@ -34,9 +34,10 @@ polaris_adaptation() {
  }
 
 checkout_feeds() {
-	./$CHECKOUT_DIR/scripts/feeds update packages luci polaris
+	./$CHECKOUT_DIR/scripts/feeds update packages luci routing polaris
 	./$CHECKOUT_DIR/scripts/feeds install -a -p packages
 	./$CHECKOUT_DIR/scripts/feeds install -a -p luci
+	./$CHECKOUT_DIR/scripts/feeds install -a -p routing
 	./$CHECKOUT_DIR/scripts/feeds install -a -p polaris
 }
 	
