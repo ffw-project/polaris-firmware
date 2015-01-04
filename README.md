@@ -7,7 +7,7 @@ Pour récupérer les sources le script s'appuie sur Git et Subversion. Il est do
 Sous debian: 
   * apt-get install git-core subversion
 
-vOus pouvez ensuite lancer la commande ci-dessous
+vous pouvez ensuite lancer la commande ci-dessous
   * ./scripts/build.sh
 
 ## 2. Compiler polaris :
@@ -19,11 +19,11 @@ Sous debian:
 
 Pour compiler Polaris executer les commandes suivantes:
   * cd polaris
-  * make menuconfig #Si vous souhaitez ajouter ou modifier des paquets.
+  * make menuconfig # cette commande permet de changer la plateforme par défaut (Atheros AR7xxx/AR9xxx) mais également d'ajouter ou modifier les paquets a installer sur polaris.
   * make V=99
 
 Les fichiers sont dans polaris/bin/ après la compilation.
 
-ATTENTION: 
- * CE FIRMWARE PEUT RENDRE VOTRE ROUTEUR HS.
+ATTENTION: recommandations a lire 
+ * Ce FIRMWARE peut rendre votre routeur hors service (débutant s'abstenir).
  * Il n'est pas recommandé d'installer ce firmware sur des routeurs ayant moins de 16 MiB de ram.
