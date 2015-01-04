@@ -19,7 +19,7 @@ Sous debian:
 
 Pour compiler Polaris executer les commandes suivantes:
   * cd polaris
-  * make menuconfig # cette commande permet de changer la plateforme par défaut (Atheros AR7xxx/AR9xxx) mais également d'ajouter ou modifier les paquets a installer sur polaris.
+  * make menuconfig # cette commande permet de changer la plateforme par défaut (Atheros AR7xxx/AR9xxx) mais également d'ajouter ou modifier les paquets a installer sur polaris. Par défaut il suffit de sauvegarder et quitter.
   * make V=99
 
 Les fichiers sont dans polaris/bin/ après la compilation.
