@@ -24,4 +24,6 @@ Pour compiler Polaris executer les commandes suivantes:
 
 Les fichiers sont dans polaris/bin/ après la compilation.
 
-ATTENTION CE FIRMWARE PEUT RENDRE VOTRE ROUTEUR HS
+ATTENTION: 
+ * CE FIRMWARE PEUT RENDRE VOTRE ROUTEUR HS.
+ * Il n'est pas recommandé d'installer ce firmware sur des routeurs ayant moins de 16 MiB de ram.
