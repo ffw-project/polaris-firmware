@@ -12,7 +12,7 @@ vous pouvez ensuite lancer la commande ci-dessous
 
 ## 2. Compiler polaris :
 
-Pour compiler votre système doit possèder certains paquetS. voici une liste exaustive en fonction de votre os http://wiki.openwrt.org/doc/howto/buildroot.exigence#table_of_known_prerequisites_and_their_corresponding_packages
+Pour compiler votre système doit possèder certains paquets. voici une liste exaustive en fonction de votre os http://wiki.openwrt.org/doc/howto/buildroot.exigence#table_of_known_prerequisites_and_their_corresponding_packages
 
 Sous debian:
   * apt-get install build-essential libssl-dev
